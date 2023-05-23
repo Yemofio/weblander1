@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Landing Page</title>
+  <style>
+    body {
+      background-color: #FFFFFF;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      color: #FF0000;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .search-box {
+      width: 400px;
+      margin-bottom: 20px;
+    }
+
+    .search-button {
+      background-color: #FF0000;
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .filters {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .filter-item {
+      margin-right: 10px;
+    }
+
+    .filter-dropdown {
+      width: 150px;
+    }
+
+    .filter-range {
+      width: 300px;
+      margin-top: 10px;
+    }
+
+    .filter-range input[type="range"] {
+      width: 100%;
+      -webkit-appearance: none;
+      background-color: #FFFFFF;
+      height: 5px;
+      border-radius: 3px;
+    }
+
+    .filter-range input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 15px;
+      height: 15px;
+      background-color: #FF0000;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Red and White Landing Page</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Search..." />
+    </div>
+    <button class="search-button">Search</button>
+    <div class="filters">
+      <div class="filter-item">
+        <label for="years-filter">Years:</label>
+        <select id="years-filter" class="filter-dropdown">
+          <option value="">All</option>
+          <option value="1950">1950</option>
+          <option value="1951">1951</option>
+          <!-- Add more options for each year -->
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label for="months-filter">Months:</label>
+        <select id="months-filter" class="filter-dropdown">
+          <option value="">All</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <!-- Add more options for each month -->
+          <option value="December">December</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label for="brand-filter">Brand:</label>
+        <select id="brand-filter" class="filter-dropdown">
+          <option value="">All</option>
+          <option value="Junior graphic">Junior graphic</option>
+          <option value="daily">Daily</option>
+          <option value="business">Business</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label for="size-filter">Size:</label>
+        <div id="size-filter" class="filter-range">
+          <input type="range" min="0" max="100" step="1" value="0">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
