@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Landing Page</title>
+  <title>Red and White Landing Page</title>
   <style>
     body {
-      background-color: #FFFFFF;
+      background-color: #F8F8FF;
       margin: 0;
       padding: 0;
       display: flex;
@@ -12,6 +12,7 @@
       align-items: center;
       height: 100vh;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
 
     .container {
@@ -25,8 +26,23 @@
     }
 
     .search-box {
-      width: 400px;
+      width: 600px;
       margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #FFFFFF;
+      border-radius: 30px;
+      padding: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-box input[type="text"] {
+      width: 100%;
+      border: none;
+      font-size: 16px;
+      padding: 5px;
+      outline: none;
     }
 
     .search-button {
@@ -36,6 +52,7 @@
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
+      border-radius: 30px;
     }
 
     .filters {
@@ -74,15 +91,37 @@
       border-radius: 50%;
       cursor: pointer;
     }
+
+    .clouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: url('https://i.imgur.com/L9hPSI2.png') repeat;
+      z-index: -1;
+      animation: cloudMove 40s linear infinite;
+    }
+
+    @keyframes cloudMove {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -2000px 0;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="clouds"></div>
   <div class="container">
     <h1>Welcome to the Red and White Landing Page</h1>
     <div class="search-box">
       <input type="text" placeholder="Search..." />
+      <button class="search-button">Search</button>
     </div>
-    <button class="search-button">Search</button>
     <div class="filters">
       <div class="filter-item">
         <label for="years-filter">Years:</label>
